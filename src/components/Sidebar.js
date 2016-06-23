@@ -28,9 +28,9 @@ const Sidebar = React.createClass({
     let props = this.props;
     return (
       <div className='sidebar'><h2> All of the Decks</h2>
-      <ul>{props.decks.map((deck, i) =>
+      <ul className="nav nav-pills nav-stacked">{props.decks.map((deck, i) =>
         <li key ={i}>
-          <Link to={`/deck/${deck.id}`}> {deck.name}</Link>
+          <Link role="presentation" className="active" to={`/deck/${deck.id}`}> {deck.name}</Link>
         </li>
       )}</ul>
     { props.addingDeck && <input ref='add' onKeyPress={this.createDeck} /> }

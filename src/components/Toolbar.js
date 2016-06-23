@@ -9,18 +9,21 @@ const mapDispatchToProps = dispatch => ({
 
 const Toolbar = ({ deckId, addDeckReveal }) => {
   let deckTools = deckId ? (<div>
-    <Link to={`/deck/${deckId}/new`}> + New Card </Link>
-    <Link to={`/deck/${deckId}/study`}> Study Deck </Link>
+    <Link to={`/deck/${deckId}/new`}> <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">+ New Card</button></Link>
+    <Link className="btn btn-success" to={`/deck/${deckId}/study`}> Study Deck </Link>
   </div>) : null;
   return(
-    <div className='toolbar'>
-      <div>
-      <button
-        onClick = {addDeckReveal}> + New Deck </button>
+    <nav>
+      <div className='navbar navbar-default'>
+        <div className="container-fluid">
+        <button
+          className= "btn btn-primary"
+          onClick = {addDeckReveal}> + New Deck </button>
 
+        </div>
+        {deckTools}
       </div>
-      {deckTools}
-    </div>
+    </nav>
   );
 };
 
