@@ -17,6 +17,7 @@
     "babelify": "^7.3.0",
     "bootstrap": "^3.3.6",
     "css-loader": "^0.23.1",
+    "fuzzysearch": "^1.0.3",
     "jquery": "^3.0.0",
     "live-server": "^1.0.0",
     "react": "^15.1.0",
